@@ -2,4 +2,4 @@
   font-family: "Computer Modern";
   src: url('cmunrm.ttf') format("truetype");
 }
-h1 { font-family: "Computer Modern", serif }
+* { font-family: "Computer Modern", serif }
