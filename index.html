@@ -9,9 +9,9 @@
 
 
 <script type="text/javascript">
-var ordinal = 1 + Math.floor(Math.random() * 6);
-$('#randomImage').css('visibility', 'visible').attr('src', ordinal + '.jpg');
-</script>
+var randomImage = 1 + Math.floor(Math.random() * 20);    
+var imgName = randomImage+".png";
+$("#randImg").attr("src",imgName);</script>
 
 <title>
 jeff lievense
@@ -27,7 +27,7 @@ jeff lievense
 <h1><font weight="bold" face="Computer Modern Sans">"leave & see"</font></h1>
 </div> 
 <table class="imgtable"><tr><td>
-<img id=randomImage />
+<img id=randImage width="512px" style="position:relative" />
 <!-- <img src="graduation.jpg" width="512px" style="position:relative" />&nbsp;</td> -->
 <td align="center"></td></tr></table>
 <div style="width:512px">
