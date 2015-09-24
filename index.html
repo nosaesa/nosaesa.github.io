@@ -8,13 +8,6 @@
 <link rel="stylesheet" href="style.css" type="text/css" />
 
 
-<style>
-#randomImage {
-    width: 512; height: 512px; /* or whatever the dimensions are */
-    visibility: hidden;
-}
-</style>
-
 <script type="text/javascript">
 var ordinal = 1 + Math.floor(Math.random() * 6);
 $('#randomImage').css('visibility', 'visible').attr('src', ordinal + '.jpg');
