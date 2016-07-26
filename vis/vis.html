@@ -125,7 +125,7 @@
 
   function start() {
     $.getJSON("test.json", function(data) {
-      gdata = data; // store in global for debugging etc
+      window.gdata = data; // store in global for debugging etc
       render(d3.select("#vis"), gdata);
     });
   }
@@ -133,20 +133,20 @@
   cc=0;
   function cycle() {
     cc += 1;
-    render(d3.select("#vis"), gdata);
+    render(d3.select("#vis"), window.gdata);
   }
   function cycleb() {
     cc -= 1;
-    render(d3.select("#vis"), gdata);
+    render(d3.select("#vis"), window.gdata);
   }
   function showmorebtn() {
     showmore = true;
-    render(d3.select("#vis"), gdata);
+    render(d3.select("#vis"), window.gdata);
   }
   function shownextbtn() {
     cc += 1;
     showmore = false;
-    render(d3.select("#vis"), gdata);
+    render(d3.select("#vis"), window.gdata);
   }
   </script>
   </head>
