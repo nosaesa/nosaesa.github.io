@@ -138,7 +138,7 @@
   }
   function cycleb() {
     cc -= 1;
-    //document.getElementByID("cellNumber").setAttribute('value',cc)
+    document.getElementByID("cellNumber").value = cc;
     render(d3.select("#vis"), gdata);
   }
   function showmorebtn() {
