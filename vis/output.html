@@ -94,8 +94,8 @@
     } else {
       endix = 4000;
     }
-    document.getElementById("cellNumber").setAttribute('value',cc);
     div.html(''); // flush
+    document.getElementById("cellNumber").setAttribute('value',cc);
     for(var i=startix;i<endix;i++) {
       var letter = data.seq[i];
 
@@ -150,7 +150,7 @@
   }
   function updateCellNumber() {
     cc = parseInt(document.getElementById("cellNumber").value);
-    document.getElementById("cellNumber").setAttribute('value',cc);
+    //document.getElementById("cellNumber").setAttribute('value',cc);
     render(d3.select("#vis"), gdata);
   }
   </script>
