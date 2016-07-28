@@ -133,34 +133,42 @@
   cc=0;
   function cycle() {
     cc += 1;
+    document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function cycleb() {
     cc -= 1;
+    document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function showmorebtn() {
     showmore = true;
+    document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function shownextbtn() {
     cc += 1;
     showmore = false;
+    document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function updateCellNumber() {
     cc = document.getElementById("cellNumber").value;
+    document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
+  }
+  function displayCellNumber() {
+    document.getElementByID("cellNumber").setAttribute('value',cc)
   }
   </script>
   </head>
-  <body onload="start();">
+  <body onload="start();displayCellNumber();">
     <div id="wrap">
       <button onclick="cycleb()" style="width:100px; height:50px;">Cycle Back</button>
       <button onclick="cycle()" style="width:100px; height:50px;">Cycle</button>
       <button onclick="showmorebtn()" style="width:100px; height:50px;">ShowMore</button>
       <button onclick="shownextbtn()" style="width:100px; height:50px;">ShowLessContinue</button>
-      <form>Cell Number:<input type="text" id="cellNumber" value=cc></form>
+      <form>Cell Number:<input type="text" id="cellNumber"></form>
       <button onclick="updateCellNumber()" style="width:100px; heigh:50px;">Update</button>
       <div id="vis">
         hi
