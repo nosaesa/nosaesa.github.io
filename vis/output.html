@@ -97,6 +97,7 @@
 
     div.html(''); // flush
     for(var i=startix;i<endix;i++) {
+      document.getElementByID("cellNumber").setAttribute('value',cc)
       var letter = data.seq[i];
 
       //var e = data.seq[i]['s'][3][cc]; // some hidden state
@@ -133,32 +134,24 @@
   cc=0;
   function cycle() {
     cc += 1;
-    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function cycleb() {
     cc -= 1;
-    document.getElementByID("cellNumber").value = cc;
     render(d3.select("#vis"), gdata);
   }
   function showmorebtn() {
     showmore = true;
-    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function shownextbtn() {
     cc += 1;
     showmore = false;
-    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function updateCellNumber() {
     cc = parseInt(document.getElementById("cellNumber").value);
-    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
-  }
-  function displayCellNumber() {
-    document.getElementByID("cellNumber").setAttribute('value',cc)
   }
   </script>
   </head>
