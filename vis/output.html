@@ -133,28 +133,28 @@
   cc=0;
   function cycle() {
     cc += 1;
-    document.getElementByID("cellNumber").setAttribute('value',cc)
+    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function cycleb() {
     cc -= 1;
-    document.getElementByID("cellNumber").setAttribute('value',cc)
+    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function showmorebtn() {
     showmore = true;
-    document.getElementByID("cellNumber").setAttribute('value',cc)
+    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function shownextbtn() {
     cc += 1;
     showmore = false;
-    document.getElementByID("cellNumber").setAttribute('value',cc)
+    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function updateCellNumber() {
     cc = document.getElementById("cellNumber").value;
-    document.getElementByID("cellNumber").setAttribute('value',cc)
+    //document.getElementByID("cellNumber").setAttribute('value',cc)
     render(d3.select("#vis"), gdata);
   }
   function displayCellNumber() {
@@ -162,7 +162,7 @@
   }
   </script>
   </head>
-  <body onload="start();displayCellNumber();">
+  <body onload="start();">
     <div id="wrap">
       <button onclick="cycleb()" style="width:100px; height:50px;">Cycle Back</button>
       <button onclick="cycle()" style="width:100px; height:50px;">Cycle</button>
