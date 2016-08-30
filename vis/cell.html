@@ -129,6 +129,10 @@
       gdata = data; // store in global for debugging etc
       render(d3.select("#vis"), gdata);
     });
+    $.getJSON("c_corr.json", function(data_corr) {
+      gdata_corr = data_corr; // store in global for debugging etc
+      //render(d3.select("#vis"), gdata);
+    });
   }
 
   cc=0;
