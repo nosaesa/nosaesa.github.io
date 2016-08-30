@@ -126,7 +126,7 @@
   }
 
   function start() {
-    $.getJSON("cluster.json", function(data) {
+    $.getJSON("labels_6.json", function(data) {
       gdata = data; // store in global for debugging etc
       render(d3.select("#vis"), gdata);
     });
