@@ -142,7 +142,7 @@
     });
     $.getJSON("c_corr.json", function(data_corr) {
       gdata_corr = data_corr; // store in global for debugging etc
-      plotCorr(gdata_corr);
+      plotCorr(gdata_corr[cc]);
     });
   }
 
@@ -187,13 +187,13 @@
     </div>
   </body>
   <script>
-  function plotCorr(gdata_corr) {
+  function plotCorr(lst) {
     new Morris.Line({
     // ID of the element in which to draw the chart.
     element: 'myfirstchart',
     // Chart data records -- each entry in this array corresponds to a point on
     // the chart.
-    data: gdata_corr[cc],
+    data: lst,
     // The name of the data record attribute that contains x-values.
     //xkey: 'year',
     // A list of names of data record attributes that contain y-values.
