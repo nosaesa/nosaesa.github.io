@@ -170,8 +170,23 @@
     render(d3.select("#vis"), gdata);
   }
   
-  <div id="myfirstchart" style="height: 250px;"></div>
-  new Morris.Line({
+  </script>
+  </head>
+  <body onload="start();">
+    <div id="wrap">
+      <button onclick="cycleb()" style="width:100px; height:50px;">Cycle Back</button>
+      <button onclick="cycle()" style="width:100px; height:50px;">Cycle</button>
+      <button onclick="showmorebtn()" style="width:100px; height:50px;">ShowMore</button>
+      <button onclick="shownextbtn()" style="width:100px; height:50px;">ShowLessContinue</button>
+      <form>Cell Number:<input type="text" id="cellNumber"></form>
+      <button onclick="updateCellNumber()" style="width:100px; heigh:50px;">Update</button>
+      <div id="myfirstchart" style="height: 250px;"></div>
+      <div id="vis">
+        L O A D I N G
+      </div>
+    </div>
+  </body>
+  <script>new Morris.Line({
   // ID of the element in which to draw the chart.
   element: 'myfirstchart',
   // Chart data records -- each entry in this array corresponds to a point on
@@ -190,20 +205,5 @@
   // Labels for the ykeys -- will be displayed when you hover over the
   // chart.
   labels: ['Value']
-  });
-  </script>
-  </head>
-  <body onload="start();">
-    <div id="wrap">
-      <button onclick="cycleb()" style="width:100px; height:50px;">Cycle Back</button>
-      <button onclick="cycle()" style="width:100px; height:50px;">Cycle</button>
-      <button onclick="showmorebtn()" style="width:100px; height:50px;">ShowMore</button>
-      <button onclick="shownextbtn()" style="width:100px; height:50px;">ShowLessContinue</button>
-      <form>Cell Number:<input type="text" id="cellNumber"></form>
-      <button onclick="updateCellNumber()" style="width:100px; heigh:50px;">Update</button>
-      <div id="vis">
-        L O A D I N G
-      </div>
-    </div>
-  </body>
+  });</script>
 </html>
