@@ -188,12 +188,19 @@
   </body>
   <script>
   function plotCorr(lst) {
+    corr = [];
+    for (i = 0; i < lst.length; i++) {
+      corr.push({
+       key: i,
+       value: lst[i]
+      });
+    }
     new Morris.Line({
     // ID of the element in which to draw the chart.
     element: 'myfirstchart',
     // Chart data records -- each entry in this array corresponds to a point on
     // the chart.
-    data: lst,
+    data: corr,
     // The name of the data record attribute that contains x-values.
     //xkey: 'year',
     // A list of names of data record attributes that contain y-values.
