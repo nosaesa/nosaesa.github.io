@@ -134,16 +134,22 @@
       gdata = data; // store in global for debugging etc
       render(d3.select("#vis"), gdata);
     });
+    $.getJSON("f_corr.json", function(data_corr) {
+      gdata_corr = data_corr; // store in global for debugging etc
+      plotCorr(gdata_corr[cc]);
+    });
   }
 
   cc=0;
   function cycle() {
     cc += 1;
     render(d3.select("#vis"), gdata);
+    plotCorr(gdata_corr[cc]);
   }
   function cycleb() {
     cc -= 1;
     render(d3.select("#vis"), gdata);
+    plotCorr(gdata_corr[cc]);
   }
   function showmorebtn() {
     showmore = true;
@@ -153,11 +159,13 @@
     cc += 1;
     showmore = false;
     render(d3.select("#vis"), gdata);
+    plotCorr(gdata_corr[cc]);
   }
   function updateCellNumber() {
     cc = parseInt(document.getElementById("cellNumber").value);
     //document.getElementById("cellNumber").setAttribute('value',cc);
     render(d3.select("#vis"), gdata);
+    plotCorr(gdata_corr[cc]);
   }
   </script>
   </head>
@@ -169,9 +177,36 @@
       <button onclick="shownextbtn()" style="width:100px; height:50px;">ShowLessContinue</button>
       <form>Cell Number:<input type="text" id="cellNumber"></form>
       <button onclick="updateCellNumber()" style="width:100px; heigh:50px;">Update</button>
+      <div id="myfirstchart" style="height: 250px;"></div>
       <div id="vis">
         L O A D I N G
       </div>
     </div>
   </body>
+  <script>
+  function plotCorr(lst) {
+    $('#myfirstchart').empty();
+    corr = [];
+    for (i = 0; i < lst.length; i++) {
+      corr.push({
+       key: i,
+       value: lst[i]
+      });
+    }
+    new Morris.Line({
+    // ID of the element in which to draw the chart.
+    element: 'myfirstchart',
+    // Chart data records -- each entry in this array corresponds to a point on
+    // the chart.
+    data: corr,
+    // The name of the data record attribute that contains x-values.
+    xkey: 'key',
+    // A list of names of data record attributes that contain y-values.
+    ykeys: ['value'],
+    // Labels for the ykeys -- will be displayed when you hover over the
+    // chart.
+    labels: ['Value']
+    });
+  }
+  </script>
 </html>
