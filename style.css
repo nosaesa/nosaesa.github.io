@@ -1,9 +1,5 @@
 @font-face {
-  font-family: "Computer Modern";
-  src: url('cmunrm.ttf') format("truetype");
+  font-family: "Hiragino";
+  src: url('hiragino-maru-gothic-pro-w4.ttf') format("truetype");
 }
-@font-face {
-  font-family: "Computer Modern Sans"
-  src: url('cmunss.ttf') format("truetype");
-}
-*{ font-family: "Computer Modern", serif }
+*{ font-family: "Computer Modern", sans-serif }
