@@ -1,5 +1,5 @@
 @font-face {
   font-family: "Hiragino";
-  src: url('hiragino-maru-gothic-pro-w4.ttf') format("truetype");
+  src: url("hiragino-maru-gothic-pro-w4.ttf") format("truetype");
 }
 *{ font-family: "Hiragino", sans-serif }
