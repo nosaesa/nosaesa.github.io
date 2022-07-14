@@ -1,4 +1,8 @@
 @font-face {
-  font-family: "Hiragino";
-  src: url("../hiragino-maru-gothic-pro-w4.ttf") format("truetype");
+  font-family: "hiragino";
+  src: url("HiraMaruProN.otf") format("opentype");
+}	
+body
+{
+  font-family: "hiragino";
 }
